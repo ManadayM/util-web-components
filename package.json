@@ -1,10 +1,18 @@
 {
   "name": "util-web-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of utility web components.",
   "author": {
-    "name": "Manaday K. Mavani"
+    "name": "Manaday K. Mavani",
+    "email": "m.k.mavani@gmail.com",
+    "url": "https://twitter.com/manadaym"
   },
+  "keywords": [
+    "utility",
+    "web components",
+    "stencil"
+  ],
+  "homepage": "https://github.com/ManadayM/util-web-components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
