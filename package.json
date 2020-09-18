@@ -1,15 +1,15 @@
 {
   "name": "util-web-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of utility web components.",
   "author": {
     "name": "Manaday K. Mavani"
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/custom-elements/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
-  "types": "dist/custom-elements/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/util-web-components/util-web-components.js",
