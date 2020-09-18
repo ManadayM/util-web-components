@@ -13,6 +13,9 @@
     "stencil"
   ],
   "homepage": "https://github.com/ManadayM/util-web-components",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
