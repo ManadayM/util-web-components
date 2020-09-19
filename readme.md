@@ -26,7 +26,6 @@ For example, the modern browsers will only download `util-components.esm.js` as 
 ```html
 <script type="module" src="https://unpkg.com/util-web-components/dist/util-components/util-components.esm.js"></script>
 <script nomodule src="https://unpkg.com/util-web-components/dist/util-components/util-components.js"></script>
-</head>
 ```
 
 #### jsDelivr CDN
@@ -34,5 +33,4 @@ For example, the modern browsers will only download `util-components.esm.js` as 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/util-web-components/dist/util-components/util-components.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/util-web-components/dist/util-components/util-components.js"></script>
-</head>
 ```
