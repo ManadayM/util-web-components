@@ -137,9 +137,10 @@ export class UcImage {
 
   render() {
     return (
-      <picture class={this.dataClass}>
+      <picture>
         <slot>{/* All <source /> nodes will be injected here... */}</slot>
         <img
+          class={this.dataClass}
           data-src={this.dataSrc}
           alt={this.dataAlt}
           data-srcset={this.dataSrcset}
