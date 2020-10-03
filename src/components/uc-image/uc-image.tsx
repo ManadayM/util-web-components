@@ -14,13 +14,7 @@ export class UcImage {
   // Props
 
   /**
-   * Render component as 'img' or 'picture'.
-   * Default is 'img'.
-   */
-  @Prop() as: 'img' | 'picture' = 'img';
-
-  /**
-   * CSS classes to be added on the root (picture) element.
+   * CSS class(es) to be added on the <img> tag inside the <picture> element.
    */
   @Prop({
     attribute: 'class',
@@ -29,7 +23,8 @@ export class UcImage {
   dataClass: string;
 
   /**
-   * Text for image's alt attribute.
+   * Image alt text.
+   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt
    */
   @Prop({
     attribute: 'alt',
@@ -39,6 +34,7 @@ export class UcImage {
 
   /**
    * Image height.
+   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height
    */
   @Prop({
     attribute: 'height',
@@ -47,7 +43,8 @@ export class UcImage {
   dataHeight: string | number;
 
   /**
-   * Image src.
+   * Image URL. The value of this prop will be set on img tag's src attribute.
+   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src
    */
   @Prop({
     attribute: 'src',
@@ -55,18 +52,30 @@ export class UcImage {
   })
   dataSrc!: string;
 
+  /**
+   * srcset for img tag.
+   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset
+   */
   @Prop({
     attribute: 'srcset',
     reflect: false
   })
   dataSrcset: string;
 
+  /**
+   * sizes for img tag.
+   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+   */
   @Prop({
     attribute: 'sizes',
     reflect: false
   })
   dataSizes: string;
 
+  /**
+   * Image width.
+   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-width
+   */
   @Prop({
     attribute: 'width',
     reflect: false
@@ -127,10 +136,10 @@ export class UcImage {
   }
 
   render() {
-    if (this.as === 'img') {
-      return (
+    return (
+      <picture class={this.dataClass}>
+        <slot>{/* All <source /> nodes will be injected here... */}</slot>
         <img
-          class={this.dataClass}
           data-src={this.dataSrc}
           alt={this.dataAlt}
           data-srcset={this.dataSrcset}
@@ -139,23 +148,7 @@ export class UcImage {
           width={this.dataWidth}
           loading="lazy"
         />
-      );
-    }
-    else {
-      return (
-        <picture class={this.dataClass}>
-          <slot>{/* All <source /> nodes will be injected here... */}</slot>
-          <img
-            data-src={this.dataSrc}
-            alt={this.dataAlt}
-            data-srcset={this.dataSrcset}
-            sizes={this.dataSizes}
-            height={this.dataHeight}
-            width={this.dataWidth}
-            loading="lazy"
-          />
-        </picture>
-      );
-    }
+      </picture>
+    )
   }
 }

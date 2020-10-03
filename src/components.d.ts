@@ -8,27 +8,38 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UcImage {
         /**
-          * Render component as 'img' or 'picture'. Default is 'img'.
-         */
-        "as": 'img' | 'picture';
-        /**
-          * Text for image's alt attribute.
+          * Image alt text.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt
          */
         "dataAlt": string;
         /**
-          * CSS classes to be added on the root (picture) element.
+          * CSS class(es) to be added on the <img> tag inside the <picture> element.
          */
         "dataClass": string;
         /**
           * Image height.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height
          */
         "dataHeight": string | number;
+        /**
+          * sizes for img tag.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+         */
         "dataSizes": string;
         /**
-          * Image src.
+          * Image URL. The value of this prop will be set on img tag's src attribute.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src
          */
         "dataSrc": string;
+        /**
+          * srcset for img tag.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset
+         */
         "dataSrcset": string;
+        /**
+          * Image width.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-width
+         */
         "dataWidth": string | number;
     }
 }
@@ -46,27 +57,38 @@ declare global {
 declare namespace LocalJSX {
     interface UcImage {
         /**
-          * Render component as 'img' or 'picture'. Default is 'img'.
-         */
-        "as"?: 'img' | 'picture';
-        /**
-          * Text for image's alt attribute.
+          * Image alt text.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt
          */
         "dataAlt"?: string;
         /**
-          * CSS classes to be added on the root (picture) element.
+          * CSS class(es) to be added on the <img> tag inside the <picture> element.
          */
         "dataClass"?: string;
         /**
           * Image height.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height
          */
         "dataHeight"?: string | number;
+        /**
+          * sizes for img tag.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+         */
         "dataSizes"?: string;
         /**
-          * Image src.
+          * Image URL. The value of this prop will be set on img tag's src attribute.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src
          */
         "dataSrc": string;
+        /**
+          * srcset for img tag.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset
+         */
         "dataSrcset"?: string;
+        /**
+          * Image width.
+          * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-width
+         */
         "dataWidth"?: string | number;
     }
     interface IntrinsicElements {
